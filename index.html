@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
+
+
+  <!-- Import Google Material Symbols Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
+</head>
+<body>
+  
+  <main class="main-container">
+
+    <header class="input-container">
+      <input class="city-input" placeholder="SEARCH FOOD ITEM">
+      <button class="Search-btn">
+        <span class="material-symbols-outlined">
+          search
+        </span>
+      </button>
+    </header>
+       
+
+      <div class ="weather-summary-container">
+        <h1 class="temp-txt">Hey, Our delicious food is waiting for you <br>
+          We are always near to you with fresh item of food</h1>
+        <div class="weather-summary-info">
+          <h1 class="weather-summary-img"><img class="weather-summary-img" src="images/chic.png" alt=""></h1>
+         
+        </div>
+      </div>
+
+
+      <div class="weather-Condition-container">
+        <div class="condition-item">
+          
+            <div class="condition-info">
+              <h5 class="forecast-item-temp">SUGGESTIONS</h5>
+              
+            </div>
+        </div>
+
+        
+       
+        </div>
+      </div>
+      <div class="forecast-items-container">
+
+        <a href="menu.html"><div class="forecast-item">
+          <h5 class="forecast-item-date regular-txt"></h5>
+          <img src="images/R.png"  class="forecast-item-img">
+        </a>
+          <h5 class="forecast-item-temp regular-txt">STARTER</h5>
+        
+        </div>
+        
+       
+        <a href="menu.html"><div class="forecast-item">
+          <h5 class="forecast-item-date regular-txt"></h5>
+          <img src="images/shake.png"  class="forecast-item-img">
+        </a>
+          <h5 class="forecast-item-temp regular-txt">SHAKES</h5>
+     
+        </div>
+
+        
+        <a href="menu.html"><div class="forecast-item">
+          <h5 class="forecast-item-date regular-txt"></h5>
+          <img src="images/food-mains.png"  class="forecast-item-img">
+        </a>
+          <h5 class="forecast-item-temp regular-txt">MAINS</h5>
+          
+        </div>
+
+        
+        <a href="menu.html"><div class="forecast-item">
+          <h5 class="forecast-item-date regular-txt"></h5>
+          <img src="images/d.png"  class="forecast-item-img">
+        </a>
+          <h5 class="forecast-item-temp regular-txt">DINNER</h5>
+         
+        </div>
+
+      </div>
+      
+    </section>
+    
+    <script type="module" src="/src/main.jsx"></script>
+
+    <a href="menu.html" class="button5">View Menu</a>
+    <a href="service.html" class="button6">SERVICE</a>
+
+  <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyBtkqBFaWrNHmY7r0KI0e3iYKFLUI9xNE8",
+    authDomain: "restaurantorders-34968.firebaseapp.com",
+    projectId: "restaurantorders-34968",
+    storageBucket: "restaurantorders-34968.firebasestorage.app",
+    messagingSenderId: "711499704653",
+    appId: "1:711499704653:web:752ead1b1c1836ab8e2f04",
+    measurementId: "G-VV7P9BH1P5"
+  };
+
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+    
+    
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+
+}
+
+body {
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb (0, 0, 0, 0, 15);
+    backdrop-filter: blur(15px);
+    
+}
+
+/* END UTILITIES */
+.regular-txt{
+    font-weight: 400;
+}
+/* END UTILITIES */
+.main-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 596px;
+    z-index: 1;
+    background: linear-gradient(
+        to top, rgba(0, 0, 0, 0.15),
+        rgba(255, 255, 255, 0.15)
+    );
+    border-radius: 12px;
+    backdrop-filter: blur(100px);
+    padding: 20px;
+    border: solid 1px transparent; 
+}
+
+
+
+/* INPUT CONTAINER */
+.input-container{
+    position:relative;
+    margin-bottom: 35px;
+}
+.city-input{
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 99px;
+    border: 3px solid transparent;
+    background: red;
+    outline: none;
+    font-weight: 500;
+    transition: 0.25s border;
+    padding-right: 45px;
+}
+.city-input:focus{
+    border: 3px solid rgb(0,0,0,0,15);
+}
+.city-input ::placeholder{
+    color: black;
+}
+.Search-btn{
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    display: flex;
+    border: none;
+    cursor: pointer;
+ 
+
+}
+/* END INPUT CONTAINER */
+
+/* section: WEATHER INFO */
+.weather-info{
+  
+    display: flex;
+    flex-direction: column;
+  
+
+}
+
+.location-container{
+     
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location{
+  
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.weather-summary-container{
+   
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+.temp-txt{
+   
+    font: 1em sans-serif;
+    font-size: 15px;
+   
+}
+
+.weather-summary-img {
+    height: 120px;
+    width: 120px;
+    animation: spin 10s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(100%);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.weather-summary-info{
+  text-align: end;
+}
+
+/* down below this is my container to get humidity and wind speed*/
+.weather-Condition-container{  
+    height: 100px;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.condition-item{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.condition-item span {
+    font-size: 30px;
+}
+
+.forecast-items-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto; 
+    padding-bottom: 10px;
+}
+
+.forecast-items-container::-webkit-scrollbar {
+    height: 12px;
+}
+
+.forecast-items-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); 
+    border-radius: 9px;
+}
+
+.forecast-items-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); 
+    border-radius: 9px;
+}
+
+.forecast-items-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.forecast-items-container::-webkit-scrollbar-button {
+    display: none; 
+}
+
+.forecast-item{
+    
+    min-width: 70px;
+    background: rgb(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 12px;
+    transition: 0.3s background;
+  
+}
+
+.forecast-item:hover{
+    background: rgb(255, 255, 255, 0.15);
+}
+
+.forecast-item-img{
+    height: 40px;
+    width: 40px;
+}
+/* End section: WEATHER INFO */
+
+/* 404 message */
+.section-message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-top: 25%;
+}
+
+.section-message img{
+    height: 180px;
+    width: fit-content;
+}
+/* END 404 message */
+
+
+
+.button5 {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 20px 0;
+    background: linear-gradient(90deg, #fb0303, #f70505);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button5:hover {
+    background: linear-gradient(90deg, #f06595, #ff6b6b);
+    transform: scale(1.05);
+}
+
+.button6 {
+    display: inline-block;
+    padding: 8px 26.5px;
+    margin: 20px 0;
+    background: linear-gradient(90deg, #fb0303, #f70505);
+    color: white;
+    text-decoration: none;
+   
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button6:hover {
+    background: linear-gradient(90deg, #f06595, #ff6b6b);
+    transform: scale(1.05);
+}
+
+.button5, .button6 {
+    display: block;
+    width: fit-content; /* Adjust width to content */
+    margin: 10px 0; /* Adds space between buttons */
+}
+
+.button7 {
+    display: inline-block;
+    padding: 8px 26.5px;
+    margin: 30px 0;
+    background: linear-gradient(90deg, #fb0303, #f70505);
+    color: white;
+    text-decoration: none;
+   
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button7:hover {
+    background: linear-gradient(90deg, #f06595, #ff6b6b);
+    transform: scale(1.05);
+}
+
+/* ////////////MENU PAGE////////////////// */
+
+
+.container10{
+    position: relative;
+    width: 900px;
+    max-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform .5s;
+}
+svg{
+    width: 30px;
+}
+header{
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 20px 0; */
+}
+header .icon-cart {
+  position: fixed;        /* Fix it relative to the viewport */
+  top: 20px;            
+  right: 20px;            
+  z-index: 999;           
+  cursor: pointer;
+}
+
+  
+header .icon-cart span{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: #f70505;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+
+}
+.listproduct .item img{
+    width: 70%;
+    filter: drop-shadow(0 50px 20px #000900);
+}
+.listproduct{
+    height: 450px;
+    width: 262px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+    overflow: auto;
+}
+.listproduct::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+}
+
+.listproduct::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); 
+    border-radius: 9px;
+}
+
+.listproduct::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); 
+    border-radius: 9px;
+}
+
+.listproduct::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.listproduct::-webkit-scrollbar-button {
+    display: none; 
+}
+.listproduct .item{
+    background-color: aliceblue;
+    padding: 20px;
+    height: 280px;
+    width: 240px;
+    border-radius: 20px;
+}
+.listproduct .item h2{
+    
+    gap: none;
+    height: 50px;
+    font-weight: 0;
+    font-size: large;
+}
+.listproduct .item .price{
+    letter-spacing: 7px;
+    font-size: small;
+}
+.listproduct .item button{
+    background-color:#000900;
+    color: aliceblue;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+.carttab{
+    width: 400px;
+    background-color: black;
+    color: aliceblue;
+    position: fixed;
+    inset: 0 -1500px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+    
+}
+body.showcart.carttab{
+    inset: 0 0 0 auto;
+}
+body.showcart.container{
+    transform: translateX(-250px);
+}
+.carttab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+    
+}
+.carttab .btn{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.carttab .btn button{
+    background-color: orangered;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.carttab .btn .close{
+    background-color:#eee ;
+    
+}
+.carttab .listcart .item img{
+    width: 100%;
+}
+.carttab .listcart .item{
+    display: grid;
+    grid-template-columns: 50px 50px 30px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.carttab .listcart .item .name{
+  
+    font-size: x-small;
+}
+.listcart .quantity span{
+    display: inline-block;
+    width: 20px;
+    height: 25px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+ 
+}
+.listcart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+}
+.listcart .item:nth-child(even){
+    background-color: #555;
+}
+.listcart{
+    overflow: auto;
+}
+.listcart::-webkit-scrollbar{
+    width: 0;
+}
+.carttab {
+    display: none;
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    width: 270px;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+    z-index: 100;
+    border-radius: 10px;
+  }
+  
+  .carttab.active {
+    display: block;
+  }
+
+  /* /////////////////////confirmation-container/////////////////////// */
+  
+  .order--container{
+    height: 140px;
+    overflow: auto;
+  }
+.order--container::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+}
+
+.order--container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); 
+    border-radius: 9px;
+}
+
+.order--container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); 
+    border-radius: 9px;
+}
+
+.order--container::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.order--container::-webkit-scrollbar-button {
+    display: none; 
+}

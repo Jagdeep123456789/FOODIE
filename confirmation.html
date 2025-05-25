@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <!-- Import Google Material Symbols Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
+</head>
+<body>
+  
+    <body>
+      
+      <main class="main-container">
+    
+        <header class="input-container">
+          <input class="city-input" placeholder="         ***** ORDER DETAILS **********">
+          <button class="Search-btn">
+            
+          </button>
+        </header>
+           
+    
+          <div class ="weather-summary-container">
+            <h1 class="temp-txt">Hey, Our delicious food is waiting for you <br>
+              We are always near to you with fresh item of food</h1>
+            <div class="weather-summary-info">
+              <h1 class="weather-summary-img"><img class="weather-summary-img" src="images/chic.png" alt=""></h1>
+             
+            </div>
+          </div>
+    
+            </div>
+    
+            <div class="confirmation-container">
+                <h1>Thank You for Your Purchase!</h1>
+                <div class="order--container" id="orderItems"></div>
+                <div id="totalAmount" style="margin-top: 20px; font-weight: bold; font-size: 20px;"></div>
+              </div>
+              
+              <script>
+                const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                const orderItemsContainer = document.getElementById('orderItems');
+                const totalAmountContainer = document.getElementById('totalAmount');
+              
+                let listproduct = [];
+                let grandTotal = 0;
+              
+                fetch('products.json')
+                  .then(res => res.json())
+                  .then(data => {
+                    listproduct = data;
+                    renderOrderItems();
+                  });
+              
+                function renderOrderItems() {
+                  cartItems.forEach(cart => {
+                    const product = listproduct.find(p => p.id == cart.product_id);
+                    if (!product) return;
+              
+                    const itemTotal = cart.quantity * product.price;
+                    grandTotal += itemTotal;
+              
+                    const item = document.createElement('div');
+                    item.classList.add('item');
+                    item.style.marginBottom = '15px';
+                    item.innerHTML = `
+                      <h2>${product.name}</h2>
+                      <p>Quantity: ${cart.quantity}</p>
+                      <p>Total: $${itemTotal.toFixed(2)}</p>
+                    `;
+                    orderItemsContainer.appendChild(item);
+                  });
+              
+                  totalAmountContainer.innerText = `Grand Total: $${grandTotal.toFixed(2)}`;
+              
+                  // Clear cart
+                  localStorage.removeItem('cartItems');
+                }
+              </script>
+              
+              <a href="menu.html" class="button7">View Menu</a>
+              <a href="index.html" class="button7">GO BACK</a>
+            </div>
+          </div>
+
+        
+      </main>
+    
+    </body>
+    </html>
+    
+
+</body>
+</html>

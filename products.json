@@ -1,0 +1,46 @@
+[
+    {
+      "id": 1,
+      "name": "Indian Burger",
+      "price": 20,
+      "image": "images/indianburger2.png"
+    },
+    {
+      "id": 2,
+      "name": "Tandoori Chicken",
+      "price": 25,
+      "image": "images/tandoori.png"
+    },
+    {
+      "id": 3,
+      "name": "Noodles",
+      "price": 15,
+      "image": "images/noodles.png"
+    },
+    {
+      "id": 4,
+      "name": "Chic Pizza",
+      "price": 30,
+      "image": "images/chic.png"
+    },
+     {
+      "id": 6,
+      "name": "Christmas Special",
+      "price": 40,
+      "image": "images/christmas.png"
+    },
+    {
+      "id": 5,
+      "name": "Naan",
+      "price": 5,
+      "image": "images/naan.png"
+    },
+    {
+      "id": 6,
+      "name": "Christmas Special",
+      "price": 40,
+      "image": "images/christmas.png"
+    }
+    
+  ]
+  
